@@ -142,6 +142,7 @@
 /*************** ABOUT *******************/
     #about {
         background-color: #f0f0f0; 
+        padding-bottom: 5%;
     }    
 
     #about img {
@@ -158,7 +159,7 @@
 
     #about p {
         width: 700px;
-        margin: 0 auto 0 auto;
+        margin: 0 auto 5px auto;
     }
 
 
@@ -284,6 +285,9 @@
     h3 {
         padding-top: 12%;
     }
+    #about {
+        padding-bottom: 5%;
+    }
     #about p {
         width: 80%;
     }
@@ -362,7 +366,10 @@
          width: 70%;
          height: auto;
      }
-     #projects img {
+     #about {
+        padding-bottom: 5%;
+     }
+     .projects img {
          width: 70%;
          height: auto;
      }
