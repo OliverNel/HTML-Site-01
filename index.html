@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <Title>Meine Website</Title>
+        <link rel="stylesheet" type="text/css" href="assets/css/all.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script defer src="assets/js/all.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:500&display=swap" rel="stylesheet">
+        <meta http-equiv="refresh" content="10">
+    </head>
+
+
+    <body>
+
+        <!----------------------------------HEADER----------------------------------->
+        <header>
+            <div class="logo">
+                <a href="#"><img src="assets/pictures/logo.png" alt="LOGO"></a>
+            </div>
+            <nav class="main-nav">
+                <div class="toggleOpen">
+                    <div class="fas fa-bars"></div>
+                </div>
+                
+                <ul class="nav-item">
+                        <a href="#home"><li>Home</li></a>
+                        <a href="#about"><li>About</li></a>
+                        <a href="#work"><li>Work</li></a>
+                        <a href="#contact"><li>Contact</li></a>
+                    </ul>
+                </nav>
+        </header>
+
+        <!----------------------------------HOME----------------------------------->
+        <section id="home">
+            <hr>
+            <h1>Home</h1>
+            <h2>Testseite von Oliver</h2>
+            <a href="#about"><img src="assets/pictures/pfeil.png" alt="Pfeil"></a>
+        </section>
+
+
+        <!----------------------------------ABOUT----------------------------------->
+        <section id="about">
+            <h3>About</h3>
+            <hr>
+            <img src="assets/pictures/avatar.png" alt="avatar">
+            <h4>Oliver</h4>
+            <p>TEST</p>
+        </section>
+
+
+        <!----------------------------------WORK----------------------------------->
+        <section id="work">
+            <h3>Work</h3>
+            <hr>
+            <div class="projects">
+                <ul>
+                    <li><a href="assets/pictures/bsp1.png" download><img src="assets/pictures/bsp1.png" alt="project1"></a></li>
+                    <li><a href="assets/pictures/bsp2.png" download><img src="assets/pictures/bsp2.png" alt="project2"></a></li>
+                    <li><a href="assets/pictures/bsp3.png" download><img src="assets/pictures/bsp3.png" alt="project3"></a></li>
+                    <li><a href="assets/pictures/bsp4.png" download><img src="assets/pictures/bsp4.png" alt="project4"></a></li>
+                    <li><a href="assets/pictures/bsp5.png" download><img src="assets/pictures/bsp5.png" alt="project5"></a></li>
+                    <li><a href="assets/pictures/bsp6.png" download><img src="assets/pictures/bsp6.png" alt="project6"></a></li>
+                </ul>
+            </div>
+        </section>
+        
+
+        <!----------------------------------CONTACT----------------------------------->
+        <section id="contact">
+            <h3>Contact</h3>
+            <hr>
+            <form action="">            
+                <input class="input_text" type="email" tabindex="1" placeholder="E-Mail"><br>
+                <input class="input_text" type="text" tabindex="2" placeholder="Betreff"><br>
+                <textarea class="input_text" tabindex="3" placeholder="Nachricht"></textarea><br>
+                <input class="button" type="submit">
+            </form>
+        </section>
+
+
+        <!----------------------------------FOOTER----------------------------------->
+        <footer>
+            <p>
+                &copy; 2019
+            </p>
+        </footer>
+
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="assets/js/mobile-menue.js"></script>
+    </body>
+</html>
