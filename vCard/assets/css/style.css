@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+}
+section {
+    min-height: 100%;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+h1, a {
+    font-family: Arial;
+}
+hr {
+    width: 50px;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto 15px auto
+}
+section img {
+    width: 240px
+}
+
+
+#about h1 {
+    font-size: 35px;
+}
+
+#skills h1 {
+    font-size: 35px;
+}
+
+#education h1 {
+    font-size: 35px;
+}
