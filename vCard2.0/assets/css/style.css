@@ -96,8 +96,8 @@ header nav ul a {
     margin-bottom: -100px;
 }
 
-.main-content .home .row .column:hover{
-    opacity: 0.5;
+.main-content .home .row .column img:hover{
+    opacity: 0.9;
     transition: all 500ms;
 }
 
@@ -195,17 +195,21 @@ header nav ul a {
 .main-content .career h3 {
     padding-top: 80px;
     margin-bottom: 0;
+    color: white;
 }
 
 .main-content .career hr{
     width: 80px;
     height: 3px;
-    background-color: black;
+    background-color: white;
     margin: 0 auto 15px auto;
 }
 
 .main-content .career {
-    background: lightgray;
+    background: url(../images/background-career.png);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .main-content .arrow-a {
@@ -290,12 +294,14 @@ header nav ul a {
     margin-top: 80px;
     text-align: center;
     font-family: Arial;
+    color: white;
 }
 
 .timeline-heute {
     margin-bottom: 20px;
     text-align: center;
     font-family: Arial;
+    color: white;
 }
 /****************************************************** FOOTER ******************************************************/
 body footer {
@@ -306,4 +312,8 @@ body footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/****************************************************** ADDITIONAL ******************************************************/
+.main-content .about .placeholder {
+    width: 100%;
 }
