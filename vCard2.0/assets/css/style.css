@@ -9,8 +9,8 @@ body, html{
 
 section {
     min-height: 100vh;
-    overflow: auto;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
 }
 
 h1,h2,h3,h4,a {
@@ -126,7 +126,8 @@ header nav ul a {
     text-align: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    padding-left: 12%;
+    width: 30%;
 }
 
 .main-content .about .row .column2{
@@ -187,6 +188,7 @@ header nav ul a {
     flex-direction: column;
     width: 30%;
     padding: 5px;
+    background-color: rgba(214, 214, 214, 0.5);
     box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -251,7 +253,7 @@ header nav ul a {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
-    width: 45.3%;
+    width: 45%;
 }
 
 .left {
@@ -312,7 +314,20 @@ body footer {
     width: 100%;
     background: #424242;
     color: white;
+    font-size: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.footer-nav a {
+
+    list-style-type: none;
+    color: white;
+    float: left;    
+    font-size: 10px;
+    padding-right: 20px;
+}
+
+.footer-nav a:hover {
+    color: green;
 }
