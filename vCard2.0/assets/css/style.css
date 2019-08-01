@@ -42,6 +42,10 @@ h1,h2,h3,h4,a {
     opacity: 0.5;
     transition: all 500ms;
 }
+
+.fa-bars {
+    display: none;
+}
 /****************************************************** HEADER / NAVIGATION *****************************************/
 .logo img {
     width: 80px;
@@ -330,4 +334,70 @@ body footer {
 
 .footer-nav a:hover {
     color: green;
+}
+
+
+
+
+/****************************************************** MEDIA QUERIES *************************************************/
+/****************************************************** TABLETS *******************************************************/
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+    }
+    .logo img {
+        width: 60px;
+    }
+
+    header nav ul {
+        margin-top: 8px;
+    }
+    header nav ul li {
+        font-size: 14px;
+    }
+}
+
+
+/****************************************************** MOBILES *******************************************************/
+@media screen and (max-width: 800px) {
+    .logo img {
+        width: 40px;
+    }
+    header nav ul {
+        margin-top: 2px;
+    }
+    .fa-bars {
+        font-size: 17px;
+        display: visible;
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        text-align: right;
+        float: right;
+        margin: 8px 25px 0 0;
+    }
+    .fa-bars:hover {
+        opacity: 0.5;
+        transition: all 500ms;
+    }
+    header nav ul {
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    header nav ul.open {
+        height: auto;
+    }
+    header nav ul li {
+        width: 100%;
+        padding: 5px 0;
+        margin: 0;
+        font-size: 11px;
+        border-top: 1px solid #dddddd;
+    }
+    header nav ul li:hover {
+        background-color: #eeeeee;
+    }
 }
