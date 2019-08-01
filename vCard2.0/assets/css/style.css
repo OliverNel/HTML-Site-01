@@ -358,9 +358,35 @@ body footer {
     header nav ul li {
         font-size: 14px;
     }
+    .timeline-dahmals {
+        padding-left: 15px;
+        text-align: left;
+    }
+    .timeline-heute {
+        padding-left: 15px;
+        text-align: left;
+    }
+    .timeline::after {
+        left: 31px;
+    }
+    .container {
+        width: 90%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    .left::after, .right::after {
+        left: 15px;
+    }
+    .right {
+        left: 0%;
+    }
 }
-
-
 /****************************************************** MOBILES *******************************************************/
 @media screen and (max-width: 730px) {
     .logo img {
