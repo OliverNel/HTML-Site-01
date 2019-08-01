@@ -370,9 +370,8 @@ body footer {
         left: 31px;
     }
     .container {
-        width: 90%;
+        width: 80%;
         padding-left: 70px;
-        padding-right: 25px;
     }
     .container::before {
         left: 60px;
