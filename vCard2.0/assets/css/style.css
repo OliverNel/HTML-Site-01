@@ -91,6 +91,9 @@ header nav ul a {
     padding-top: 5px;
 }
 /****************************************************** HOME ********************************************************/
+h2 {
+    padding: 0 15px;
+}
 .main-content .home .row {
     display: flex;
     justify-content: space-around;
@@ -359,7 +362,7 @@ body footer {
 
 
 /****************************************************** MOBILES *******************************************************/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 730px) {
     .logo img {
         width: 40px;
     }
@@ -368,13 +371,12 @@ body footer {
     }
     .fa-bars {
         font-size: 17px;
-        display: visible;
         display: inline-block;
         width: 100%;
         cursor: pointer;
         text-align: right;
         float: right;
-        margin: 8px 25px 0 0;
+        margin: -25px 25px 0 0;
     }
     .fa-bars:hover {
         opacity: 0.5;
@@ -391,7 +393,7 @@ body footer {
         height: auto;
     }
     header nav ul li {
-        width: 100%;
+        width: 100vw;
         padding: 5px 0;
         margin: 0;
         font-size: 11px;
@@ -399,5 +401,29 @@ body footer {
     }
     header nav ul li:hover {
         background-color: #eeeeee;
+    }
+    .main-nav a {
+        margin: 0;
+    }
+    .main-content .about .row {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main-content .about .row .column1 {
+        margin-bottom: 50px;
+        width: 100%;
+        padding: 0;
+    }
+    .main-content .about .row .column2 {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .main-content .skills .row {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-content .skills .row .column {
+        margin-bottom: 50px;
+        width: 100%;
     }
 }
