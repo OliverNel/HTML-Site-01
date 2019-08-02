@@ -46,6 +46,10 @@ h1,h2,h3,h4,a {
 .fa-bars {
     display: none;
 }
+
+.fa-times {
+    display: none;
+}
 /****************************************************** HEADER / NAVIGATION *****************************************/
 .logo img {
     width: 80px;
@@ -196,14 +200,14 @@ h2 {
     width: 30%;
     padding: 5px;
     background-color: rgba(214, 214, 214, 0.5);
-    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
 }
 
 .main-content .skills .row .column p{
     text-align: center;
     font-family: Arial;
 }
-/****************************************************** Career ******************************************************/
+/****************************************************** CAREER ******************************************************/
 .main-content .career h3 {
     padding-top: 80px;
     margin-bottom: 0;
@@ -315,6 +319,65 @@ h2 {
     font-family: Arial;
     color: white;
 }
+/****************************************************** CONTACT *****************************************************/
+.main-content .contact h3 {
+    padding-top: 80px;
+    margin-bottom: 0;
+    color: black;
+}
+
+.main-content .contact hr{
+    width: 80px;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto 15px auto;
+}
+
+.main-content .arrow-a {
+    margin-bottom: 40px;
+}
+
+.main-content .contact .contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content .contact .contact-form form input, textarea {
+    font-family: Arial;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.main-content .contact .contact-form form input {
+    width: 552px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.main-content .contact .contact-form form input:first-child {
+    margin-top: 10px;
+}
+
+.main-content .contact .contact-form form textarea  {
+    width: 550px;
+    padding-left: 10px;
+}
+
+.main-content .contact .contact-form form .button {
+    background-color: lightgray;
+    color: black;
+    width: 566px;
+    height: 50px;
+    border-color: transparent;
+}
+
+.main-content .contact .contact-form form .button:hover {
+    background-color: #ff5722;
+    color: white;
+    transition: all 500ms;
+}
 /****************************************************** FOOTER ******************************************************/
 body footer {
     height: 40px;
@@ -407,6 +470,28 @@ body footer {
         opacity: 0.5;
         transition: all 500ms;
     }
+    .fa-times {
+        font-size: 17px;
+        display: hidden;
+        width: 100%;
+        cursor: pointer;
+        text-align: right;
+        float: right;
+        margin: -25px 27px 0 0;
+        transition-duration: 1s;
+    }
+    .fa-times:hover {
+        opacity: 0.5;
+        transition: all 500ms;
+    }
+    .fa-times.open {
+        display: inline-block;
+        
+    }
+    .fa-bars.open {
+        transition-duration: 1s;
+        display: none;
+    }
     header nav ul {
         height: 0;
         overflow: hidden;
@@ -416,6 +501,7 @@ body footer {
     }
     header nav ul.open {
         height: auto;
+        transition: all 500ms;
     }
     header nav ul li {
         width: 100vw;
@@ -450,5 +536,9 @@ body footer {
     .main-content .skills .row .column {
         margin-bottom: 50px;
         width: 100%;
+    }
+    .main-content .home .row {
+        flex-direction: column;
+        justify-content: center;
     }
 }
