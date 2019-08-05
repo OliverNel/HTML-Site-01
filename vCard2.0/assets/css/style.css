@@ -337,9 +337,12 @@ h2 {
     margin-bottom: 40px;
 }
 
-.main-content .contact .contact-form {
+/* .main-content .contact .contact-form {
     display: flex;
     justify-content: center;
+} */
+.main-content .contact #contact-form {
+    text-align: center;
 }
 
 .main-content .contact .contact-form form input, textarea {
@@ -351,7 +354,7 @@ h2 {
 }
 
 .main-content .contact .contact-form form input {
-    width: 552px;
+    width: 40%;
     height: 30px;
     padding-left: 10px;
 }
@@ -361,14 +364,16 @@ h2 {
 }
 
 .main-content .contact .contact-form form textarea  {
-    width: 550px;
+    width: 40%;
+    height: 120px;
     padding-left: 10px;
+    resize: none;
 }
 
 .main-content .contact .contact-form form .button {
     background-color: lightgray;
     color: black;
-    width: 566px;
+    width: 41%;
     height: 50px;
     border-color: transparent;
 }
@@ -447,6 +452,15 @@ body footer {
     }
     .right {
         left: 0%;
+    }
+    .main-content .contact .contact-form form input {
+        width: 60%;
+    }
+    .main-content .contact .contact-form form textarea {
+        width: 60%;
+    }
+    .main-content .contact .contact-form form .button {
+        width: 62%;
     }
 }
 /****************************************************** MOBILES *******************************************************/
@@ -540,5 +554,14 @@ body footer {
     .main-content .home .row {
         flex-direction: column;
         justify-content: center;
+    }
+    .main-content .contact .contact-form form input {
+        width: 60%;
+    }
+    .main-content .contact .contact-form form textarea {
+        width: 60%;
+    }
+    .main-content .contact .contact-form form .button {
+        width: 63%;
     }
 }

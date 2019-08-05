@@ -6,7 +6,7 @@
     $user_subject = $_POST['subject'];
 
 
-    $mail_form = 'o.neller@web.de';
+    $mail_form = 'oliver.neller@nord.com';
 
     $email_subject = 'NEUE EMAIL VON LOCALHOST';
 
@@ -16,13 +16,13 @@
                             "NACHRICHT: $message. \n";
 
     
-    $to = "oliver.neller@nord.com";
+    $to = "o.neller@web.de";
 
     $headers = "Form $email_form \r\n";
 
     $headers .= "Reply-To: $visitor_email \r\n";
     
-    mail($to,$email_subject,$email_body,$headers);
+    mail($to, $email_subject, $email_body, $headers);
 
     header("Location: index.html");
 ?>
