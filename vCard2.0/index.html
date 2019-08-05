@@ -5,13 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1">
         
-        <title>vCard 2.0 | Meine Website</title>
+        <title>vCard 2 | Meine Website</title>
 
         <link rel="stylesheet" type="text/css" href="assets/css/all.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
         <script defer src="assets/js/all.js"></script>
         <script defer src="assets/js/mobile.js"></script>
+        <script defer src="assets/js/ttt-game.js"></script>
         <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
         
@@ -39,6 +40,7 @@
                     <a href="#skills"><li>Skills</li></a>
                     <a href="#career"><li>Career</li></a>
                     <a href="#contact"><li>Contact</li></a>
+                    <a href="#game"><li>Game</li></a>
                 </ul>
             </nav>
         </header>
@@ -59,6 +61,9 @@
                     </div>
                     <div class="column">
                         <a href="#contact"><img src="assets/images/contact.png" alt="contact"></a>  
+                    </div>
+                    <div class="column">
+                        <a href="#game"><img src="assets/images/game.png" alt="game"></a>  
                     </div>
                 </div>
                 <a href="#about"><img src="assets/images/down-arrow.png" alt="arrow-down" class="arrow"></a>
@@ -198,8 +203,80 @@
                         <input class="button" type="submit" value="Senden">
                     </form>
                 </div>
-                <a href="#home" class=".arrow-a"><img src="assets/images/up-arrow.png" alt="arrow-up" class="arrow"></a>
+                <a href="#game" class=".arrow-a"><img src="assets/images/down-arrow.png" alt="down-up" class="arrow"></a>
             </section>
+<!------------------------------------------------------- GAME ------------------------------------------------------>
+            <section id="game" class="game">
+                <h3>Game</h3>
+                <hr>
+                <a href="http://localhost/vCard2.0/assets/images/game.png"><img src="assets/images/game.png" alt="Game"></a> 
+                <h4>Tick-Tack-Toe</h4>
+                <div class="field">
+                    <div class="table">
+                        <div class="row">
+                            <div class="column">
+                                <div class="td-or">
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="td-mr">                                 
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="td-ur">
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="td-om">
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="td-mm">
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="td-um">
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="td-ol">
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="td-ml">
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="td-ul">
+                                    <div class="x">X</div>
+                                    <div class="o">O</div>
+                                </div>
+                            </div>
+                        </div>     
+                    </div>    
+                </div>
+                <a href="#home" class=".arrow-a"><img src="assets/images/up-arrow.png" alt="arrow-up" class="arrow"></a>
+            </section>          
         </div> <!-----------------------main-contnet ENDE-->
 <!------------------------------------------------------- FOOTER ---------------------------------------------------->      
         <footer>
