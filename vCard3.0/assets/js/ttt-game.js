@@ -1,72 +1,86 @@
-$(document).ready(function() {
-    $('.td-or').click(function() {
-        $(".td-or .x").toggleClass("open-click");
-    });
-    $('.td-or').click(function() {
-        $(".td-or .o").toggleClass("open-click");
-    });
+var boxArray = new Array(9);
+var turn=0,won=-1;
+function initialzie() {
+    for (var i = 0; i < boxArray.length; i++) {
+        boxArray[i] = -1;
+    }
+    won=0;
+    $('.player-box').text('-');
+}
+function iswon() {
+    //Reihen Check
+    if(boxArray[0]==boxArray[1]&&boxArray[1]==boxArray[2]&&boxArray[0]!=-1) {
+        $('.resultat').text('Spieler '+player+' hat gewonnen!');
+        won = 1;
+    }
+    if(boxArray[3]==boxArray[4]&&boxArray[4]==boxArray[5]&&boxArray[3]!=-1) {
+        $('.resultat').text('Spieler '+player+' hat gewonnen!');
+        won = 1;
+    }
+    if(boxArray[6]==boxArray[7]&&boxArray[7]==boxArray[8]&&boxArray[6]!=-1) {
+        $('.resultat').text('Spieler '+player+' hat gewonnen!');
+        won = 1;
+    }
+    //Spalten Check
+    if(boxArray[0]==boxArray[3]&&boxArray[3]==boxArray[6]&&boxArray[0]!=-1) {
+        $('.resultat').text('Spieler '+player+' hat gewonnen!');
+        won = 1;
+    }
+    if(boxArray[1]==boxArray[4]&&boxArray[4]==boxArray[7]&&boxArray[1]!=-1) {
+        $('.resultat').text('Spieler '+player+' hat gewonnen!');
+        won = 1;
+    }
+    if(boxArray[2]==boxArray[5]&&boxArray[5]==boxArray[8]&&boxArray[2]!=-1) {
+        $('.resultat').text('Spieler '+player+' hat gewonnen!');
+        won = 1;
+    }
+    //Diagonal Check
+    if(boxArray[0]==boxArray[4]&&boxArray[4]==boxArray[8]&&boxArray[0]!=-1) {
+        $('.resultat').text('Spieler '+player+' hat gewonnen!');
+        won = 1;
+    }
+    if(boxArray[2]==boxArray[4]&&boxArray[4]==boxArray[6]&&boxArray[2]!=-1) {
+        $('.resultat').text('Spieler '+player+' hat gewonnen!');
+        won = 1;
+    }
 
+    var i;
+    for (i = 0; i< boxArray.length; i++) {
+        if(boxArray[i]==-1)
+            break;
+    }
+    if(i==9&&won==0)
+        alert('Unentschieden');
+}
 
-    $('.td-om').click(function() {
-        $(".td-om .x").toggleClass("open-click");
+$(document).ready(function(){
+    initialzie();
+    $('.player-box').click(function(e){
+        var clicked = $(this).attr('data-box');
+        if(won==0){
+            if(turn==0){
+            if(boxArray[clicked-1]==-1){
+                $(this).text('X');
+                boxArray[clicked-1]=0;
+                turn = 1;
+                player = "X";
+            }
+            }else{
+                if(boxArray[clicked-1]==-1){
+                    $(this).text('O');
+                    boxArray[clicked-1]=1;
+                    turn = 0;
+                    player = "O";
+                }
+            }   
+            
+            iswon();
+        }
+        
     });
-    $('.td-om').click(function() {
-        $(".td-om .o").toggleClass("open-click");
-    });
-
-
-    $('.td-ol').click(function() {
-        $(".td-ol .x").toggleClass("open-click");
-    });
-    $('.td-ol').click(function() {
-        $(".td-ol .o").toggleClass("open-click");
-    });
-
-
-    $('.td-mr').click(function() {
-        $(".td-mr .x").toggleClass("open-click");
-    });
-    $('.td-mr').click(function() {
-        $(".td-mr .o").toggleClass("open-click");
-    });
-
-
-    $('.td-mm').click(function() {
-        $(".td-mm .x").toggleClass("open-click");
-    });
-    $('.td-mm').click(function() {
-        $(".td-mm .o").toggleClass("open-click");
-    });
-
-
-    $('.td-ml').click(function() {
-        $(".td-ml .x").toggleClass("open-click");
-    });
-    $('.td-ml').click(function() {
-        $(".td-ml .o").toggleClass("open-click");
-    });
-
-
-    $('.td-ur').click(function() {
-        $(".td-ur .x").toggleClass("open-click");
-    });
-    $('.td-ur').click(function() {
-        $(".td-ur .o").toggleClass("open-click");
-    });
-
-
-    $('.td-um').click(function() {
-        $(".td-um .x").toggleClass("open-click");
-    });
-    $('.td-um').click(function() {
-        $(".td-um .o").toggleClass("open-click");
-    });
-
-
-    $('.td-ul').click(function() {
-        $(".td-ul .x").toggleClass("open-click");
-    });
-    $('.td-ul').click(function() {
-        $(".td-ul .o").toggleClass("open-click");
+    $('#reset').click(function(){
+        $('.resultat').text('');
+        alert("Das Spielfeld wird jetzt zurückgesetzt!");
+        initialzie();
     });
 });

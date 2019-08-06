@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1">
         
-        <title>vCard 2 | Meine Website</title>
+        <title>vCard 3.0 | Meine Website</title>
 
         <link rel="stylesheet" type="text/css" href="assets/css/all.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -13,9 +13,9 @@
         <script defer src="assets/js/all.js"></script>
         <script defer src="assets/js/mobile.js"></script>
         <script defer src="assets/js/ttt-game.js"></script>
-        <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-        
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">
         
 
         <link rel="icon" href="assets/images/favicon.ico">
@@ -210,72 +210,34 @@
                 <h3>Game</h3>
                 <hr>
                 <a href="http://localhost/vCard2.0/assets/images/game.png"><img src="assets/images/game.png" alt="Game"></a> 
-                <h4>Tick-Tack-Toe</h4>
-                <div class="field">
-                    <div class="table">
-                        <div class="row">
-                            <div class="column">
-                                <div class="td-or">
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="td-mr">                                 
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="td-ur">
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="column">
-                                <div class="td-om">
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="td-mm">
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="td-um">
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="row">
-                            <div class="column">
-                                <div class="td-ol">
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="td-ml">
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="td-ul">
-                                    <div class="x">X</div>
-                                    <div class="o">O</div>
-                                </div>
-                            </div>
-                        </div>     
-                    </div>    
-                </div>
-                <a href="#home" class=".arrow-a"><img src="assets/images/up-arrow.png" alt="arrow-up" class="arrow"></a>
+                <h4>Tic-Tac-Toe</h4>
+                
+                <p class="resultat"></p>
+
+                <table class="board">
+                    <tr>
+                        <td class="player-box" data-box="1"></td>
+                        <td class="player-box" data-box="2"></td>
+                        <td class="player-box" data-box="3"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="player-box" data-box="4"></td>
+                        <td class="player-box" data-box="5"></td>
+                        <td class="player-box" data-box="6"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="player-box" data-box="7"></td>
+                        <td class="player-box" data-box="8"></td>
+                        <td class="player-box" data-box="9"></td>
+                    </tr>
+                    
+                </table>
+
+                <button type="button" class="reset-btn" id="reset" name="button">RESET</button>
+
+                <a href="#home" class="arrow-a"><img src="assets/images/up-arrow.png" alt="arrow-up" class="arrow"></a>
             </section>          
         </div> <!-----------------------main-contnet ENDE-->
 <!------------------------------------------------------- FOOTER ---------------------------------------------------->      

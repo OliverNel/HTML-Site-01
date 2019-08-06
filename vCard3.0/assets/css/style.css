@@ -384,6 +384,7 @@ h2 {
     transition: all 500ms;
 }
 /****************************************************** GAME *****************************************************/
+
 .main-content .game h3 {
     padding-top: 80px;
     margin-bottom: 0;
@@ -403,160 +404,42 @@ h2 {
     font-size: 35px;
 }
 
-.main-content .game .field .table {
-    display: flex;
-    justify-content: center;
-}
-.main-content .game .field .table .row {
-    flex-direction: row; 
-    width: 15%;
-}
-.main-content .game .field .table .column {
-    flex-direction: column;
-    border: 3px solid black;
-    height: 17vh;
+.main-content .game p {
     text-align: center;
     font-family: Arial;
-    font-size: 80px;
+    font-size: 15px;
 }
-.main-content .game .field .td-or {
-    padding-top: 20%;
+
+.main-content .game .board {
+    margin: auto auto auto auto;
 }
-.main-content .game .field .td-om {
-    padding-top: 20%;
+
+.main-content .game .board .player-box {
+    font-size: 30px;
+    font-family: 'Baloo Chettan', cursive;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-collapse: collapse;
 }
-.main-content .game .field .td-ol {
-    padding-top: 20%;
+
+.main-content .game .reset-btn {
+    margin: 30px auto auto auto;
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    font-size: 20px;
 }
-.main-content .game .field .td-mr {
-    padding-top: 20%;
-}
-.main-content .game .field .td-mm {
-    padding-top: 20%;
-}
-.main-content .game .field .td-ml {
-    padding-top: 20%;
-}
-.main-content .game .field .td-ur {
-    padding-top: 20%;
-}
-.main-content .game .field .td-um {
-    padding-top: 20%;
-}
-.main-content .game .field .td-ul {
-    padding-top: 20%;
-}
-.main-content .game .field .td-or .o {
-    display: none;
-}
-.main-content .game .field .td-om .o {
-    display: none;
-}
-.main-content .game .field .td-ol .o {
-    display: none;
-}
-.main-content .game .field .td-mr .o {
-    display: none;
-}
-.main-content .game .field .td-mm .o {
-    display: none;
-}
-.main-content .game .field .td-ml .o {
-    display: none;
-}
-.main-content .game .field .td-ur .o {
-    display: none;
-}
-.main-content .game .field .td-um .o {
-    display: none;
-}
-.main-content .game .field .td-ul .o {
-    display: none;
-}
-.main-content .game .field .td-or .x {
-    display: block;
-}
-.main-content .game .field .td-om .x {
-    display: block;
-}
-.main-content .game .field .td-ol .x {
-    display: block;
-}
-.main-content .game .field .td-mr .x {
-    display: block;
-}
-.main-content .game .field .td-mm .x {
-    display: block;
-}
-.main-content .game .field .td-ml .x {
-    display: block;
-}
-.main-content .game .field .td-ur .x {
-    display: block;
-}
-.main-content .game .field .td-um .x {
-    display: block;
-}
-.main-content .game .field .td-ul .x {
-    display: block;
-}
-.main-content .game .field .td-or .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-om .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-ol .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-mr .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-mm .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-ml .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-ur .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-um .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-ul .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-or .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-om .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-ol .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-mr .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-mm .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-ml .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-ur .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-um .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-ul .o.open-click  {
-    display: block;
+
+.main-content .game .reset-btn:hover {
+    background-color: #ff5722;
+    color: white;
+    transition: all 500ms;
 }
 /****************************************************** FOOTER ******************************************************/
 body footer {
-    height: 40px;
+    height: 80px;
     width: 100%;
     background: #424242;
     color: white;

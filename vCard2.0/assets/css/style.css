@@ -419,140 +419,20 @@ h2 {
     font-family: Arial;
     font-size: 80px;
 }
-.main-content .game .field .td-or {
-    padding-top: 20%;
+.main-content .game .player-box {
+    padding-top: 20px;
 }
-.main-content .game .field .td-om {
-    padding-top: 20%;
+.main-content .game .reset-btn {
+    color: black;
+    font-size: 20px;
+    border: 0;
+    background-color: white;
+    
 }
-.main-content .game .field .td-ol {
-    padding-top: 20%;
-}
-.main-content .game .field .td-mr {
-    padding-top: 20%;
-}
-.main-content .game .field .td-mm {
-    padding-top: 20%;
-}
-.main-content .game .field .td-ml {
-    padding-top: 20%;
-}
-.main-content .game .field .td-ur {
-    padding-top: 20%;
-}
-.main-content .game .field .td-um {
-    padding-top: 20%;
-}
-.main-content .game .field .td-ul {
-    padding-top: 20%;
-}
-.main-content .game .field .td-or .o {
-    display: none;
-}
-.main-content .game .field .td-om .o {
-    display: none;
-}
-.main-content .game .field .td-ol .o {
-    display: none;
-}
-.main-content .game .field .td-mr .o {
-    display: none;
-}
-.main-content .game .field .td-mm .o {
-    display: none;
-}
-.main-content .game .field .td-ml .o {
-    display: none;
-}
-.main-content .game .field .td-ur .o {
-    display: none;
-}
-.main-content .game .field .td-um .o {
-    display: none;
-}
-.main-content .game .field .td-ul .o {
-    display: none;
-}
-.main-content .game .field .td-or .x {
-    display: block;
-}
-.main-content .game .field .td-om .x {
-    display: block;
-}
-.main-content .game .field .td-ol .x {
-    display: block;
-}
-.main-content .game .field .td-mr .x {
-    display: block;
-}
-.main-content .game .field .td-mm .x {
-    display: block;
-}
-.main-content .game .field .td-ml .x {
-    display: block;
-}
-.main-content .game .field .td-ur .x {
-    display: block;
-}
-.main-content .game .field .td-um .x {
-    display: block;
-}
-.main-content .game .field .td-ul .x {
-    display: block;
-}
-.main-content .game .field .td-or .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-om .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-ol .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-mr .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-mm .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-ml .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-ur .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-um .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-ul .x.open-click {
-    display: none;
-}
-.main-content .game .field .td-or .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-om .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-ol .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-mr .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-mm .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-ml .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-ur .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-um .o.open-click  {
-    display: block;
-}
-.main-content .game .field .td-ul .o.open-click  {
-    display: block;
+.main-content .game .reset-button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 /****************************************************** FOOTER ******************************************************/
 body footer {
