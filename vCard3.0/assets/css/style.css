@@ -405,6 +405,7 @@ h2 {
 }
 
 .main-content .game p {
+    font-weight: bold;
     text-align: center;
     font-family: Arial;
     font-size: 15px;
@@ -422,6 +423,7 @@ h2 {
     height: 80px;
     border: 2px solid black;
     border-collapse: collapse;
+    cursor: pointer;
 }
 
 .main-content .game .reset-btn {
