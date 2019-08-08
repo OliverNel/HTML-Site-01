@@ -28,6 +28,10 @@ h1,h2,h3,h4,a {
 }
 
 .main-content a {
+    margin: auto;
+}
+
+.main-content .picture {
     margin-top: 120px;
     display: flex;
     justify-content: center;
@@ -438,6 +442,55 @@ h2 {
     background-color: #ff5722;
     color: white;
     transition: all 500ms;
+}
+
+.main-content .game .board #box1.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box2.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box3.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box4.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box5.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box6.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box7.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box8.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box9.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box10.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box11.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box12.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box13.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box14.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box15.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box16.win {
+    border: 2px solid red;
 }
 /****************************************************** FOOTER ******************************************************/
 body footer {
