@@ -8,8 +8,4 @@ $(document).ready(function() {
     $('.toggleOpen').click(function() {
         $(".fa-times").toggleClass("open");
     });
-    $('.button').click(function(){
-        location.reload();
-        alert("E-Mail wurde Versendet!");
-    });
 });

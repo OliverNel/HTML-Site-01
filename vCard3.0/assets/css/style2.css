@@ -1,0 +1,16 @@
+.main-content h1 {
+    padding-top: 150px;
+}
+.main-content .database_content td {
+    width: 200px;
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+.main-content .database_content {
+    font-family: Arial;
+    text-align: center;
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}

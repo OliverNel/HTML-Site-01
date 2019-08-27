@@ -41,6 +41,7 @@
                     <a href="#career"><li>Career</li></a>
                     <a href="#contact"><li>Contact</li></a>
                     <a href="#game"><li>Game</li></a>
+                    <a href="/vCard3.0/data.php"><li>Daten</li></a>
                 </ul>
             </nav>
         </header>
@@ -77,7 +78,10 @@
                 <hr>
                 <div class="row">
                     <div class="column1">
-                        <img src="assets/images/about.png" alt="About">
+                        <div class="picture-box">
+                            <a href="/vCard2.0/assets/images/about.png"><img src="assets/images/about.png" alt="About"></a>
+                        </div>
+                        
                         <h4>About Me</h4>
                         <hr>
                         <p>
@@ -87,7 +91,10 @@
                         </p>  
                     </div>
                     <div class="column2">
-                        <img src="assets/images/hobbys.png" alt="Hobbys">
+                        <div class="picture-box">
+                            <a href="/vCard2.0/assets/images/hobbys.png"><img src="assets/images/hobbys.png" alt="Hobbys"></a> 
+                        </div>
+                        
                         <h4>My Hobbys</h4>
                         <hr>
                         <div class="listeHobby">
@@ -127,7 +134,10 @@
                 
                 <div class="row">
                     <div class="column">
-                        <img src="assets/images/hardware.png" alt="Hardware">
+                        <div class="picture-box">
+                            <a href="/vCard2.0/assets/images/hardware.png"><img src="assets/images/hardware.png" alt="Hardware"></a>
+                        </div>
+                        
                         <h4>Hardware</h4>
                         <p>
                             Ich habe mit 8 meinen ersten Computer zusammengeschraubt und seid dem an ist mein Interesse an Computern immer mehr gewachsen. 
@@ -136,7 +146,9 @@
                         </p>
                     </div>
                     <div class="column">
-                        <img src="assets/images/code.png" alt="Code">
+                        <div class="picture-box">
+                            <a href="/vCard2.0/assets/images/code.png"><img src="assets/images/code.png" alt="Code"></a>
+                            </div>
                         <h4>Coding</h4>
                         <p>
                             Ich habe ein Praktikum im Bereich "Fachinformatiker für Anwendungsentwicklung" absolviert. Dort sollte ich C# benutzen. 
@@ -144,14 +156,16 @@
                         </p>
                     </div>
                     <div class="column">
-                            <img src="assets/images/helpdesk.png" alt="Helpdesk"> 
-                            <h4>Helpdesk</h4>
-                            <p>
-                                Ich habe zwei weitere Praktika absolviert in den Bereichen "Fachinformatiker für Systemintegration" und "Informatikkaufmann". 
-                                In beiden Praktika haben die Mitarbeiter Helpdesk gemacht. Ich konnte mitlaufen und habe Betriebsysteme geupdatet und Hardware ausgetauscht.
-                                Bei Nord musste ich mich mit Software technischen Problemen auseinander setzen. Ich habe dort viele Office probleme gelöst 
-                                und ab und zu auch mal einen neuen Computer ausgeliefert. 
-                            </p>  
+                        <div class="picture-box">
+                           <a href="/vCard2.0/assets/images/helpdesk.png"><img src="assets/images/helpdesk.png" alt="Helpdesk"></a> 
+                        </div>
+                        <h4>Helpdesk</h4>
+                        <p>
+                            Ich habe zwei weitere Praktika absolviert in den Bereichen "Fachinformatiker für Systemintegration" und "Informatikkaufmann". 
+                            In beiden Praktika haben die Mitarbeiter Helpdesk gemacht. Ich konnte mitlaufen und habe Betriebsysteme geupdatet und Hardware ausgetauscht.
+                            Bei Nord musste ich mich mit Software technischen Problemen auseinander setzen. Ich habe dort viele Office probleme gelöst 
+                            und ab und zu auch mal einen neuen Computer ausgeliefert. 
+                        </p>  
                     </div>
                 </div>
                 <div class="picture">
@@ -213,7 +227,7 @@
                 </div>             
             
                 <div class="contact-form">
-                    <form id="contact-form" method="post" action="contact-form-handler.php">
+                    <form id="contact-form" method="POST" action="assets/php/contact-form-database.php">
                         <input name="fname" type="text" tabindex="1" class="form-control" placeholder="Vorname"><br>
                         <input name="lname" type="text" tabindex="2" class="form-control" placeholder="Nachname"><br>
                         <input name="email" type="email" tabindex="3" class="form-control" placeholder="E-Mail" required><br>
@@ -271,7 +285,7 @@
                 </table>
 
                 <button type="button" class="reset-btn" id="reset" name="button">RESET</button>
-                
+
                 <div class="picture">
                     <a href="#home" class="arrow-a"><img src="assets/images/up-arrow.png" alt="arrow-up" class="arrow"></a>
                 </div>
@@ -285,6 +299,9 @@
                 <a href="#about"><li>About</li></a>
                 <a href="#skills"><li>Skills</li></a>
                 <a href="#career"><li>Career</li></a>
+                <a href="#contact"><li>Contact</li></a>
+                <a href="#game"><li>Game</li></a>
+                <a href="/vCard3.0/data.php"><li>Data</li></a>
             </ul>
             <p>&copy; 2019</p>
         </footer>

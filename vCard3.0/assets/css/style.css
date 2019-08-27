@@ -407,6 +407,38 @@ h2 {
     color: black;
     font-size: 35px;
 }
+.main-content .game .switch {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.main-content .game #ki {
+    margin: 30px 5px 60px 5px;
+    background-color: rgba(211, 211, 211, 0.5);
+    font-size: 20px;
+    transition: all 500ms;
+}
+
+.main-content .game #friend {
+    margin: 30px 5px 60px 5px;
+    background-color: rgba(211, 211, 211, 0.5);
+    font-size: 20px;
+    transition: all 500ms;
+}
+
+.main-content .game #ki.choose {
+    background-color: green;
+    color: white;
+    transition: all 500ms;
+
+}
+
+.main-content .game #friend.choose {
+    background-color: green;
+    color: white;
+    transition: all 500ms;
+}
 
 .main-content .game p {
     font-weight: bold;
@@ -431,10 +463,10 @@ h2 {
 }
 
 .main-content .game .reset-btn {
-    margin: 30px auto auto auto;
+    margin: 30px auto 60px auto;
     display: flex;
     justify-content: center;
-    background-color: lightgray;
+    background-color: rgba(211, 211, 211, 0.5);
     font-size: 20px;
 }
 

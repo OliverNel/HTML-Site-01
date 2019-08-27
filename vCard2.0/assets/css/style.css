@@ -28,6 +28,10 @@ h1,h2,h3,h4,a {
 }
 
 .main-content a {
+    margin: auto;
+}
+
+.main-content .picture {
     margin-top: 120px;
     display: flex;
     justify-content: center;
@@ -384,6 +388,7 @@ h2 {
     transition: all 500ms;
 }
 /****************************************************** GAME *****************************************************/
+
 .main-content .game h3 {
     padding-top: 80px;
     margin-bottom: 0;
@@ -402,41 +407,127 @@ h2 {
     color: black;
     font-size: 35px;
 }
-
-.main-content .game .field .table {
+.main-content .game .buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
-.main-content .game .field .table .row {
-    flex-direction: row; 
-    width: 15%;
+
+
+.main-content .game #ki {
+    margin: 30px 5px 60px 5px;
+    background-color: rgba(211, 211, 211, 0.5);
+    font-size: 20px;
+    transition: all 500ms;
 }
-.main-content .game .field .table .column {
-    flex-direction: column;
-    border: 3px solid black;
-    height: 17vh;
+
+.main-content .game #friend {
+    margin: 30px 5px 60px 5px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    transition: all 500ms;
+}
+
+.main-content .game #ki.choose {
+    background-color: green;
+    color: white;
+    transition: all 500ms;
+
+}
+
+.main-content .game #friend.choose {
+    background-color: rgba(211, 211, 211, 0.5);
+    color: black;
+    transition: all 500ms;
+}
+
+.main-content .game p {
+    font-weight: bold;
     text-align: center;
     font-family: Arial;
-    font-size: 80px;
+    font-size: 15px;
 }
-.main-content .game .player-box {
-    padding-top: 20px;
+
+.main-content .game .board {
+    margin: auto auto auto auto;
 }
+
+.main-content .game .board .player-box {
+    font-size: 30px;
+    font-family: 'Baloo Chettan', cursive;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
 .main-content .game .reset-btn {
-    color: black;
-    font-size: 20px;
-    border: 0;
-    background-color: white;
-    
-}
-.main-content .game .reset-button {
-    margin-top: 30px;
+    margin: 30px 5px 60px 5px;
     display: flex;
     justify-content: center;
+    background-color: rgba(211, 211, 211, 0.5);
+    font-size: 20px;
+}
+
+.main-content .game .reset-btn:hover {
+    background-color: #ff5722;
+    color: white;
+    transition: all 500ms;
+}
+
+.main-content .game .board #box1.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box2.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box3.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box4.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box5.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box6.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box7.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box8.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box9.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box10.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box11.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box12.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box13.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box14.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box15.win {
+    border: 2px solid red;
+}
+.main-content .game .board #box16.win {
+    border: 2px solid red;
 }
 /****************************************************** FOOTER ******************************************************/
 body footer {
-    height: 40px;
+    height: 80px;
     width: 100%;
     background: #424242;
     color: white;
