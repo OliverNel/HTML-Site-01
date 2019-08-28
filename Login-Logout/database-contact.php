@@ -82,7 +82,15 @@
                                 <a href="/login-logout/index.php#career"><li>Career</li></a>
                                 <a href="/login-logout/index.php#contact"><li>Contact</li></a>
                                 <a href="/login-logout/index.php#game"><li>Game</li></a>
-                                <a href="/login-logout/data.php"><li>Data</li></a>
+                                <?php
+                                    if (isset($_SESSION['u_id'])){
+                                        echo('<a href="/login-logout/data.php"><li>Daten</li></a>');
+                                        echo('<a href="/login-logout/login.php"><li>Logout</li></a>');
+                                    }
+                                    else {
+                                        echo('<a href="/login-logout/login.php"><li>Login / Registrieren</li></a>');
+                                    }
+                                ?>
                             </ul>
                             <p>&copy; 2019</p>
                 </footer>

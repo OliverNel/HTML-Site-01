@@ -47,6 +47,7 @@
                                     <a href="/login-logout/index.php#contact"><li>Contact</li></a>
                                     <a href="/login-logout/index.php#game"><li>Game</li></a>
                                     <a href="/login-logout/data.php"><li>Daten</li></a>
+                                    <a href="/login-logout/data.php"><li>Logout</li></a>
                                 </ul>
                             </nav>
                         </header>

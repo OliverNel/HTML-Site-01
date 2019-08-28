@@ -51,7 +51,7 @@
                            echo ('<a href="/login-logout/login.php"><li>Logout</li></a> ');
                         }
                         else {
-                            echo ('<a href="/login-logout/login.php"><li>Login</li></a> ');
+                            echo ('<a href="/login-logout/login.php"><li>Login / Registrieren</li></a> ');
                         }
                         
                     ?>

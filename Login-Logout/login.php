@@ -29,7 +29,7 @@
         <h1>Registrieren</h1>
         <?php   
             if (isset($_SESSION['u_id'])) {
-                echo ('<div class="contact-form"><form id="contact-form" method="POST" action="assets/php/logout-from-database.php"><input class="button" type="submit" name="submit" tabindex="9" value="Logout"></form></div>');
+                echo ('<div class="contact-form"><form id="contact-form" method="POST" action="assets/php/logout-from-database.php"><input class="button" type="submit" name="logout" tabindex="9" value="Logout"></form></div>');
             }
 
             else {
@@ -45,7 +45,7 @@
                 
                         <div class="contact-form">
                             <form id="contact-form" method="POST" action="assets/php/login-from-database.php">
-                                <input name="username" type="text" tabindex="6"  class="form-control"placeholder="Username"><br>
+                                <input name="username" type="text" tabindex="6"  class="form-control"placeholder="Username" required><br>
                                 <input name="password"  type="password" tabindex="7" class="form-control" placeholder="Passwort"><br>
                                 <input class="button" type="submit" tabindex="8" value="Login">
                             </form>
@@ -74,7 +74,15 @@
                     <a href="/login-logout/index.php#career"><li>Career</li></a>
                     <a href="/login-logout/index.php#contact"><li>Contact</li></a>
                     <a href="/login-logout/index.php#game"><li>Game</li></a>
-                    <a href="/login-logout/data.php"><li>Daten</li></a>
+                    <?php
+                        if (isset($_SESSION['u_id'])){
+                            echo('<a href="/login-logout/data.php"><li>Daten</li></a>');
+                            echo('<a href="/login-logout/login.php"><li>Logout</li></a>');
+                        }
+                        else {
+                            echo('<a href="/login-logout/login.php"><li>Login / Registrieren</li></a>');
+                        }
+                    ?>
                 </ul>
             </nav>
         </header>
