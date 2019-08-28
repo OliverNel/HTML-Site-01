@@ -15,7 +15,7 @@ $userlogin_username = mysqli_real_escape_string($conn, $_POST['username']);
 $userlogin_password = mysqli_real_escape_string($conn, $_POST['password']);
 
 
-$sql = "SELECT Password FROM users WHERE Username='$userlogin_username' or EMail='$userlogin_username'";
+$sql = "SELECT * FROM users WHERE Username='$userlogin_username' or EMail='$userlogin_username'";
 $result = mysqli_query($conn, $sql);
 $checkresult = mysqli_num_rows($result);
 
@@ -35,6 +35,10 @@ if ($row = mysqli_fetch_assoc($result)) {
         header("Location: ../../login.php?login=$userlogin_username=faild");
         exit();
     }
+}
+else {
+    header("Location: ../../login.php?login=$userlogin_username=faild");
+    exit();
 }
 
 
