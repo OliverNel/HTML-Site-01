@@ -8,10 +8,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$user_name = $_POST['name'];
-$user_email = $_POST['email'];
-$user_username = $_POST['username'];
-$user_password = $_POST['password'];
+$user_name = mysqli_real_escape_string($conn, $_POST['name']);
+$user_email = mysqli_real_escape_string($conn, $_POST['email']);
+$user_username = mysqli_real_escape_string($conn, $_POST['username']);
+$user_password = mysqli_real_escape_string($conn, $_POST['password']);
 
 $password_hash = password_hash($user_password, PASSWORD_DEFAULT);
 

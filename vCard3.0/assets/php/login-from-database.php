@@ -8,24 +8,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$userlogin_username = $_POST['username'];
-$userlogin_password = $_POST['password'];
+$userlogin_username = mysqli_real_escape_string($conn, $_POST['username']);
+$userlogin_password = mysqli_real_escape_string($conn, $_POST['password']);
 
 
+$sql = "SELECT Password FROM users WHERE Username='$userlogin_username'";
+$result = mysqli_query($conn, $sql);
+$checkresult = mysqli_num_rows($result);
 
-$pdo = new PDO('mysql:host=localhost;dbname=website', 'root', '');
-$sql = "SELECT 'Password' FROM users";
-foreach ($pdo->query($sql) as $row) {
-   $result = password_verify($userlogin_password, $row['Password']);
-   echo $result;
+
+if ($result == 1) {
+    header("Location: ../../login.html?login=$userlogin_username=success");
+    $login = 1;
 }
 
-if ($result == true) {
-    header("Location: ../../login.html?login=$userlogin_username=success");
- }
-
 else {
-    header("Location: ../../login.html?login=$userlogin_username=faild");
+   header("Location: ../../login.html?login=$userlogin_username=faild");
+   $login=0;
 }
 
 
