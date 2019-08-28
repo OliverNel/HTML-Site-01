@@ -8,13 +8,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$name = $_POST['name'];;
-$email = $_POST['email'];
-$username = $_POST['username'];
-$password = $_POST['password'];
+$user_name = $_POST['name'];
+$user_email = $_POST['email'];
+$user_username = $_POST['username'];
+$user_password = $_POST['password'];
 
-$sql = "INSERT INTO users (Name, EMail, Username, Password) VALUES ('$name', '$email', '$username', '$password')";
+$password_hash = password_hash($user_password, PASSWORD_DEFAULT);
+
+$sql = "INSERT INTO users (Name, EMail, Username, Password) VALUES ('$user_name', '$user_email', '$user_username', '$password_hash')";
 mysqli_query($conn, $sql);
+
+
+
+
+
+
+
+
 
 
 $mail_form = 'o.neller@web.de';
@@ -27,6 +37,5 @@ $to = "o.neller@web.de";
 
 mail($to, $email_subject, $email_body);
 
-header("Location: ../../login.html?registartion=success");
-
+header("Location: ../../login.html?registration=success");
 ?>

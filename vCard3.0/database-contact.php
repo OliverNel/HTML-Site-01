@@ -48,17 +48,26 @@
         </header>
             <div class="main-content"> <!---main-contnet ANFANG-->
                 <h1>Daten der Datenbank</h1>
-
-                <div class="row">
-                    <div class="column">  
-                        <a href="database-contact.php"><button class="auswahl">Inhalte der Kontakt-Anfragen</button></a>
-                    </div>
-                    <div class="column">
-                        <a href="database-login.php"><button class="auswahl">Inhalte der User</button></a>
-                    </div>
-                </div>
-
-
+                    <table class="database_content">
+                        <tr>
+                            <th>ID</th> 
+                            <th>Name</th>
+                            <th>EMail</th>
+                            <th>Betreff</th>
+                            <th>Nachricht</th>
+                            <th>Datum</th>
+                        </tr>
+                        <?php
+                            $i = 1;
+                            $pdo = new PDO('mysql:host=localhost;dbname=website', 'root', '');
+                            $sql = "SELECT id, Vorname, Nachname, EMail, Betreff, Nachricht, Datum FROM contact ORDER BY Datum DESC";
+                                foreach ($pdo->query($sql) as $row) {  
+                                    echo "<tr>"."<td>".$row['id']."</td>"."<td>".$row['Vorname']." ".$row['Nachname']."</td>"."<td>".$row['EMail']."</td>"."<td>".$row['Betreff']."</td>"."<td>".$row['Nachricht']."</td>"."<td>".$row['Datum']."</td>"."</tr>";
+                                    $i++;
+                                }
+                        ?> 
+                    </table>
+                    <a href="data.php"><button class="back">Zurück</button></a>
             </div> <!-----------------------main-contnet ENDE-->
         <!------------------------------------------------------- FOOTER ---------------------------------------------------->      
         <footer>
