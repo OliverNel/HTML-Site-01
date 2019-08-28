@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 <!------------------------------------------------------- DEFINITION ------------------------------------------------> 
@@ -50,6 +54,12 @@
             <section id="home" class="home">
                 <h1>Oliver Neller</h1>
                 <h2>Fachinformatiker f&uuml;r Systemintegration</h2>
+                <?php   
+                    if (isset($_SESSION['u_id'])) {
+                        echo "<h2>Fachinformatiker f&uuml;r Systemintegration</h2>";
+                    }
+                ?>
+                <h2>Du bist eingeloggt</h2>
                 <div class="row">
                     <div class="column">
                         <a href="#about"><img src="assets/images/about.png" alt="About"></a>  

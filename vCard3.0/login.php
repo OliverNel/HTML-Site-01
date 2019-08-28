@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 <!------------------------------------------------------- DEFINITION ------------------------------------------------> 
@@ -34,12 +38,18 @@
                 </div>
 
                 <div class="contact-form">
-                        <form id="contact-form" method="POST" action="assets/php/login-from-database.php">
-                            <input name="username" type="text" tabindex="6"  class="form-control"placeholder="Username"><br>
-                            <input name="password"  type="password" tabindex="7" class="form-control" placeholder="Passwort"><br>
-                            <input class="button" type="submit" tabindex="8" value="Login">
-                        </form>
-                    </div>
+                    <form id="contact-form" method="POST" action="assets/php/login-from-database.php">
+                        <input name="username" type="text" tabindex="6"  class="form-control"placeholder="Username"><br>
+                        <input name="password"  type="password" tabindex="7" class="form-control" placeholder="Passwort"><br>
+                        <input class="button" type="submit" tabindex="8" value="Login">
+                    </form>
+                </div>
+                <?php
+                    if (isset($_SESSION['u_id'])) {
+                        echo ('<div class="contact-form"><form id="contact-form" method="POST" action="assets/php/logout-from-database.php"><input class="button" type="submit" name="submit" tabindex="9" value="Logout"></form></div>');
+                    }
+                ?>
+                
     </body>
 <!------------------------------------------------------- HEADER / NAVIGATION  --------------------------------------> 
         <header>
@@ -54,12 +64,12 @@
                     <i class="fas fa-times" aria-hidden="true"></i>
                 </div>
                 <ul class="nav-item">
-                    <a href="#home"><li>Home</li></a>
-                    <a href="#about"><li>About</li></a>
-                    <a href="#skills"><li>Skills</li></a>
-                    <a href="#career"><li>Career</li></a>
-                    <a href="#contact"><li>Contact</li></a>
-                    <a href="#game"><li>Game</li></a>
+                    <a href="/vCard3.0/index.php#home"><li>Home</li></a>
+                    <a href="/vCard3.0/index.php#about"><li>About</li></a>
+                    <a href="/vCard3.0/index.php#skills"><li>Skills</li></a>
+                    <a href="/vCard3.0/index.php#career"><li>Career</li></a>
+                    <a href="/vCard3.0/index.php#contact"><li>Contact</li></a>
+                    <a href="/vCard3.0/index.php#game"><li>Game</li></a>
                     <a href="/vCard3.0/data.php"><li>Daten</li></a>
                 </ul>
             </nav>
@@ -67,12 +77,12 @@
 <!------------------------------------------------------- FOOTER ---------------------------------------------------->      
 <footer>
         <ul class="footer-nav">
-            <a href="#home"><li>Home</li></a>
-            <a href="#about"><li>About</li></a>
-            <a href="#skills"><li>Skills</li></a>
-            <a href="#career"><li>Career</li></a>
-            <a href="#contact"><li>Contact</li></a>
-            <a href="#game"><li>Game</li></a>
+            <a href="/vCard3.0/index.php#home"><li>Home</li></a>
+            <a href="/vCard3.0/index.php#about"><li>About</li></a>
+            <a href="/vCard3.0/index.php#skills"><li>Skills</li></a>
+            <a href="/vCard3.0/index.php#career"><li>Career</li></a>
+            <a href="/vCard3.0/index.php#contact"><li>Contact</li></a>
+            <a href="/vCard3.0/index.php#game"><li>Game</li></a>
             <a href="/vCard3.0/data.php"><li>Data</li></a>
         </ul>
         <p>&copy; 2019</p>

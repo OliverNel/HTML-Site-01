@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 <!------------------------------------------------------- DEFINITION ------------------------------------------------> 
@@ -36,12 +40,12 @@
                     <i class="fas fa-times" aria-hidden="true"></i>
                 </div>
                 <ul class="nav-item">
-                    <a href="/vCard3.0/index.html#home"><li>Home</li></a>
-                    <a href="/vCard3.0/index.html#about"><li>About</li></a>
-                    <a href="/vCard3.0/index.html#skills"><li>Skills</li></a>
-                    <a href="/vCard3.0/index.html#career"><li>Career</li></a>
-                    <a href="/vCard3.0/index.html#contact"><li>Contact</li></a>
-                    <a href="/vCard3.0/index.html#game"><li>Game</li></a>
+                    <a href="/vCard3.0/index.php#home"><li>Home</li></a>
+                    <a href="/vCard3.0/index.php#about"><li>About</li></a>
+                    <a href="/vCard3.0/index.php#skills"><li>Skills</li></a>
+                    <a href="/vCard3.0/index.php#career"><li>Career</li></a>
+                    <a href="/vCard3.0/index.php#contact"><li>Contact</li></a>
+                    <a href="/vCard3.0/index.php#game"><li>Game</li></a>
                     <a href="/vCard3.0/data.php"><li>Daten</li></a>
                 </ul>
             </nav>
@@ -72,12 +76,12 @@
         <!------------------------------------------------------- FOOTER ---------------------------------------------------->      
         <footer>
                     <ul class="footer-nav">
-                        <a href="#home"><li>Home</li></a>
-                        <a href="#about"><li>About</li></a>
-                        <a href="#skills"><li>Skills</li></a>
-                        <a href="#career"><li>Career</li></a>
-                        <a href="#contact"><li>Contact</li></a>
-                        <a href="#game"><li>Game</li></a>
+                        <a href="/vCard3.0/index.php#home"><li>Home</li></a>
+                        <a href="/vCard3.0/index.php#about"><li>About</li></a>
+                        <a href="/vCard3.0/index.php#skills"><li>Skills</li></a>
+                        <a href="/vCard3.0/index.php#career"><li>Career</li></a>
+                        <a href="/vCard3.0/index.php#contact"><li>Contact</li></a>
+                        <a href="/vCard3.0/index.php#game"><li>Game</li></a>
                         <a href="/vCard3.0/data.php"><li>Data</li></a>
                     </ul>
                     <p>&copy; 2019</p>

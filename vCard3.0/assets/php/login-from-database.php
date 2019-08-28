@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -12,20 +15,29 @@ $userlogin_username = mysqli_real_escape_string($conn, $_POST['username']);
 $userlogin_password = mysqli_real_escape_string($conn, $_POST['password']);
 
 
-$sql = "SELECT Password FROM users WHERE Username='$userlogin_username'";
+$sql = "SELECT Password FROM users WHERE Username='$userlogin_username' or EMail='$userlogin_username'";
 $result = mysqli_query($conn, $sql);
 $checkresult = mysqli_num_rows($result);
 
 
-if ($result == 1) {
-    header("Location: ../../login.html?login=$userlogin_username=success");
-    $login = 1;
+
+if ($row = mysqli_fetch_assoc($result)) {
+    $verifyresult = password_verify($userlogin_password, $row['Password']);
+    if ($verifyresult == true) {
+        $_SESSION['u_id'] = $row['id'];
+        $_SESSION['u_name'] = $row['Name'];
+        $_SESSION['u_email'] = $row['EMail'];
+        $_SESSION['u_uname'] = $row['Username'];
+        header("Location: ../../login.php?login=$userlogin_username=success");
+    }
+
+    elseif ($verifyresult == false) {
+        header("Location: ../../login.php?login=$userlogin_username=faild");
+        exit();
+    }
 }
 
-else {
-   header("Location: ../../login.html?login=$userlogin_username=faild");
-   $login=0;
-}
+
 
 
 

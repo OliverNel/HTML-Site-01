@@ -36,5 +36,5 @@ $to = "o.neller@web.de";
 
 mail($to, $email_subject, $email_body);
 
-header("Location: ../../index.html?send_message=success");
+header("Location: ../../index.php?send_message=success");
 ?>

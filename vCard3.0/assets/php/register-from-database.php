@@ -37,5 +37,5 @@ $to = "o.neller@web.de";
 
 mail($to, $email_subject, $email_body);
 
-header("Location: ../../login.html?registration=success");
+header("Location: ../../login.php?registration=success");
 ?>
