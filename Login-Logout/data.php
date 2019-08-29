@@ -2,6 +2,7 @@
     session_start();
 
     if (isset($_SESSION['u_id'])) {
+        if ($_SESSION['u_perm'] == 2) {
         echo ('<!DOCTYPE HTML>
                 <html>
                 <!------------------------------------------------------- DEFINITION ------------------------------------------------> 
@@ -47,7 +48,7 @@
                                     <a href="/login-logout/index.php#contact"><li>Contact</li></a>
                                     <a href="/login-logout/index.php#game"><li>Game</li></a>
                                     <a href="/login-logout/data.php"><li>Daten</li></a>
-                                    <a href="/login-logout/data.php"><li>Logout</li></a>
+                                    <a href="/login-logout/login.php"><li>Profil</li></a>
                                 </ul>
                             </nav>
                         </header>
@@ -80,8 +81,20 @@
                         </footer>
                     </body>
                 </html>'
-            );}
-            else {
-                header("Location: login.php");
-            }
+            );
+        }
+        else {
+            echo '<script language="javascript">';
+            echo 'alert("Du hast keine Berächtigung!")';
+            echo '</script>';
+
+            echo '<script type="text/javascript">';
+            echo 'window.location = "/login-logout/"';
+            echo '</script>';
+        }
+    }
+    
+    else {
+        header("Location: index.php");
+    }
 ?>

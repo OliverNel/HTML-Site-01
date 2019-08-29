@@ -45,7 +45,7 @@
                             <?php
                                 if (isset($_SESSION['u_id'])){
                                     echo('<a href="/login-logout/data.php"><li>Daten</li></a>');
-                                    echo('<a href="/login-logout/login.php"><li>Logout</li></a>');
+                                    echo('<a href="/login-logout/login.php"><li>Profil</li></a>');
                                 }
                                 else {
                                     echo('<a href="/login-logout/login.php"><li>Login / Registrieren</li></a>');
@@ -59,6 +59,7 @@
                             <table class="database_content">
                                 <tr>
                                     <th>ID</th> 
+                                    <th>Berächtigung</th>
                                     <th>Name</th>
                                     <th>EMail</th>
                                     <th>Username</th>
@@ -66,12 +67,10 @@
                                     <th>Datum</th>
                                 </tr>
                                 <?php
-                                    $i = 1;
                                     $pdo = new PDO('mysql:host=localhost;dbname=website', 'root', '');
-                                    $sql = "SELECT id, `Name`, EMail, Username, `Password`, `date` FROM users ORDER BY `date` DESC";
+                                    $sql = "SELECT id, `Permissions`, `Name`, EMail, Username, `Password`, `date` FROM users ORDER BY `date` DESC";
                                         foreach ($pdo->query($sql) as $row) {  
-                                            echo "<tr>"."<td>".$row['id']."</td>"."<td>".$row['Name']."</td>"."<td>".$row['EMail']."</td>"."<td>".$row['Username']."</td>"."<td>".$row['Password']."</td>"."<td>".$row['date']."</td>"."</tr>";
-                                            $i++;
+                                            echo "<tr>"."<td>".$row['id']."</td>"."<td>".$row['Permissions']."</td>"."<td>".$row['Name']."</td>"."<td>".$row['EMail']."</td>"."<td>".$row['Username']."</td>"."<td>".$row['Password']."</td>"."<td>".$row['date']."</td>"."</tr>";
                                         }
                                 ?> 
                             </table>
@@ -90,5 +89,4 @@
                             </ul>
                             <p>&copy; 2019</p>
                 </footer>
-            </body>
         </html>

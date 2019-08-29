@@ -28,6 +28,7 @@ if ($row = mysqli_fetch_assoc($result)) {
         $_SESSION['u_name'] = $row['Name'];
         $_SESSION['u_email'] = $row['EMail'];
         $_SESSION['u_uname'] = $row['Username'];
+        $_SESSION['u_perm'] = $row['Permissions'];
         header("Location: ../../login.php?login=$userlogin_username=success");
     }
 

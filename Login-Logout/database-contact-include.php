@@ -81,7 +81,7 @@
                                 <?php
                                     if (isset($_SESSION['u_id'])){
                                         echo('<a href="/login-logout/data.php"><li>Daten</li></a>');
-                                        echo('<a href="/login-logout/login.php"><li>Logout</li></a>');
+                                        echo('<a href="/login-logout/login.php"><li>Profil</li></a>');
                                     }
                                     else {
                                         echo('<a href="/login-logout/login.php"><li>Login / Registrieren</li></a>');

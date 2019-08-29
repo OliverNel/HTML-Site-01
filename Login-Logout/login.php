@@ -13,6 +13,7 @@
 
         <link rel="stylesheet" type="text/css" href="assets/css/all.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style3.css">
 
         <script defer src="assets/js/all.js"></script>
         <script defer src="assets/js/mobile.js"></script>
@@ -26,34 +27,52 @@
     </head>
 
     <body>
-        <h1>Registrieren</h1>
-        <?php   
-            if (isset($_SESSION['u_id'])) {
-                echo ('<div class="contact-form"><form id="contact-form" method="POST" action="assets/php/logout-from-database.php"><input class="button" type="submit" name="logout" tabindex="9" value="Logout"></form></div>');
-            }
-
-            else {
-                echo ('<div class="contact-form">
-                        <form id="contact-form" method="POST" action="assets/php/register-from-database.php">
-                            <input name="name" type="text" tabindex="1" class="form-control" placeholder="Name"><br>
-                            <input name="email" type="email" tabindex="2" class="form-control" placeholder="E-Mail" required><br>
-                            <input name="username" type="text" tabindex="3"  class="form-control"placeholder="Username"><br>
-                            <input name="password"  type="password" tabindex="4" class="form-control" placeholder="Passwort"><br>
-                            <input class="button" type="submit" tabindex="5" value="Registrieren">
-                        </form>
-                        </div>
-                
-                        <div class="contact-form">
-                            <form id="contact-form" method="POST" action="assets/php/login-from-database.php">
-                                <input name="username" type="text" tabindex="6"  class="form-control"placeholder="Username" required><br>
-                                <input name="password"  type="password" tabindex="7" class="form-control" placeholder="Passwort"><br>
-                                <input class="button" type="submit" tabindex="8" value="Login">
-                            </form>
-                        </div>'
-                    );
+        <section class="home">
+            <?php   
+                if (isset($_SESSION['u_id'])) {
+                    echo ('<div id="headline"><h2>Profil</h2></div><div id="headline"><h1>Hallo '.$_SESSION['u_name'].'!</h1><br><p>hier siehst du deine Profil-information</p></div>');
+                    echo ('<table class="database_content">
+                    <tr>
+                        <th>Name</th>
+                        <th>E-Mail</th>
+                        <th>Username</th>
+                        <th>Berächtigung</th>
+                        <th>Registrierungsdatum</th>
+                    </tr>
+                    ');
+                    include 'assets/php/profile-include.php'; 
+                    echo('</table>'); 
+                    echo ('<div class="login-form"><form id="login-form" method="POST" action="assets/php/logout-from-database.php"><input class="button" id="logout-button" type="submit" name="logout" tabindex="9" value="Logout"></form></div>');
                 }
-            ?>
-                
+
+                else {
+                    echo ('<div class="headline">
+                            <h1 id="h-login">Login</h1>
+                            <h1 id="h-register">Registrieren</h1>
+                            </div>
+                            <div class="row">
+                                <div class="login-form">
+                                    <form id="login-form" method="POST" action="assets/php/login-from-database.php">
+                                        <input name="username" type="text" tabindex="6"  class="form-control"placeholder="Username" required><br>
+                                        <input name="password"  type="password" tabindex="7" class="form-control" placeholder="Passwort"><br>
+                                        <input class="button" type="submit" tabindex="8" value="Login">
+                                    </form>
+                                </div>
+                                <div class="login-form">
+                                    <form id="login-form" method="POST" action="assets/php/register-from-database.php">
+                                        <input name="name" type="text" tabindex="1" class="form-control" placeholder="Name"><br>
+                                        <input name="email" type="email" tabindex="2" class="form-control" placeholder="E-Mail" required><br>
+                                        <input name="username" type="text" tabindex="3"  class="form-control"placeholder="Username"><br>
+                                        <input name="password"  type="password" tabindex="4" class="form-control" placeholder="Passwort"><br>
+                                        <input class="button" type="submit" tabindex="5" value="Registrieren">
+                                    </form>
+                                </div>
+                            </div>'
+                        );                   
+                    }
+                ?>     
+        </section>
+
     </body>
 <!------------------------------------------------------- HEADER / NAVIGATION  --------------------------------------> 
         <header>
@@ -77,7 +96,7 @@
                     <?php
                         if (isset($_SESSION['u_id'])){
                             echo('<a href="/login-logout/data.php"><li>Daten</li></a>');
-                            echo('<a href="/login-logout/login.php"><li>Logout</li></a>');
+                            echo('<a href="/login-logout/login.php"><li>Profil</li></a>');
                         }
                         else {
                             echo('<a href="/login-logout/login.php"><li>Login / Registrieren</li></a>');
