@@ -95,6 +95,12 @@
     }
     
     else {
-        header("Location: index.php");
+        echo '<script language="javascript">';
+        echo 'alert("Logge dich zuerst ein!")';
+        echo '</script>';
+
+        echo '<script type="text/javascript">';
+        echo 'window.location = "/login-logout/login.php"';
+        echo '</script>';
     }
 ?>
