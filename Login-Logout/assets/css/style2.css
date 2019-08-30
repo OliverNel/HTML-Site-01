@@ -56,10 +56,10 @@
 }
 
 .main-content .back {
-    margin-top: 10%;
-    margin-left: 40%;
-    width: 300px;
-    height: 100px;
+    margin-left: 45%;
+    margin-top: 1%;
+    width: 200px;
+    height: 70px;
     font-size: 20px;
     background-color: whitesmoke;
     border: none;
@@ -91,13 +91,38 @@
     cursor: pointer;
 }
 
-.main-content .database-content td .form-control{
+.main-content .form-control{
+    margin-top: 30px;
+    margin-left: 45%;
     border: 0;
     color: white;
     background: transparent;
     border-bottom: 1px solid white;
+    width: 200px;
+    height: 30px;
 }
 
-.main-content .database-content .form-control::placeholder {
+.main-content .form-control::placeholder {
     color: whitesmoke;
+}
+
+.main-content .button{
+    margin-left: 45%;
+    border: 0;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    background-color: #cc0000;
+    color: white;
+    border-radius: 4px;
+    width: 200px;
+    height: 25px;
+}
+
+.main-content .button:hover{
+    background-color: #ff0000;
+    transition: all 500ms;
+}
+
+.main-content .form-control option{
+    background: darkslategray;
 }

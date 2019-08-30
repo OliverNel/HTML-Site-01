@@ -46,6 +46,7 @@
                             <a href="/login-logout/index.php#contact"><li>Contact</li></a>
                             <a href="/login-logout/index.php#game"><li>Game</li></a>
                             <a href="/login-logout/data.php"><li>Daten</li></a>
+                            <a href="/login-logout/login.php"><li>Profil</li></a>
                         </ul>
                     </nav>
                 </header>
@@ -69,18 +70,23 @@
                                         foreach ($pdo->query($sql) as $row) {  
                                             echo "<tr>"."<td>".$row['Name']."</td>"."<td>".$row['EMail']."</td><td>".$row['Permissions']."</td>"."<td>".$row['Username']."</td>"."<td>".$row['Password']."</td>"."</tr>";
                                         }
+                                        if (isset($row)){
+                                            $_SESSION['user_username1'] = $row['Username'];
+                                        }
                                 ?> 
-                            <tr>
+                                </table>
                                 <form class="user-form" action="assets/php/update-from-database.php" method="POST">
-                                    <td><input name="name" type="text" tabindex="1"  class="form-control" placeholder="New Name"></td>
-                                    <td><input name="email" type="text" tabindex="2"  class="form-control" placeholder="New EMail"></td>
-                                    <td><input name="permissions" type="text" tabindex="3"  class="form-control" placeholder="Ändere die Berächtigung"></td>
-                                    <td><input name="username" type="text" tabindex="4"  class="form-control" placeholder="New Username"></td>
-                                    <td><input name="password" type="text" tabindex="5"  class="form-control" placeholder="New Password"><input class="button" type="submit" tabindex="6" value="Ändern"></td>
+                                    <input name="name" type="text" tabindex="1"  class="form-control" placeholder="New Name"><br>
+                                    <input name="email" type="text" tabindex="2"  class="form-control" placeholder="New EMail"><br>
+                                    <Select name="permissions" tabindex="3" class="form-control" placeholder="Berächtigung ändern">
+                                        <option value="">Benutzer</option>
+                                        <option value="">Admin</option>
+                                    </Select><br>
+                                    <input name="username" type="text" tabindex="4"  class="form-control" placeholder="New Username"><br>
+                                    <input name="password" type="password" tabindex="5"  class="form-control" placeholder="New Password"><br>
+                                    <input class="button" type="submit" tabindex="6" value="Ändern">
                                     
                                 </form>
-                            </tr>
-                            </table>
                             <a href="data.php"><button class="back">Zurück</button></a>
                     </div> <!-----------------------main-contnet ENDE-->
                 <!------------------------------------------------------- FOOTER ---------------------------------------------------->      

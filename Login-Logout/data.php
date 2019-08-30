@@ -59,6 +59,9 @@
                                     <div class="column">  
                                         <a href="database-contact.php"><button class="auswahl">Inhalte der Kontakt-Anfragen</button></a>
                                     </div>
+                                    <div class="column">  
+                                        <a href="change.php"><button class="auswahl">User überarbeiten</button></a>
+                                    </div>
                                     <div class="column">
                                         <a href="database-login.php"><button class="auswahl">Inhalte der User</button></a>
                                     </div>
